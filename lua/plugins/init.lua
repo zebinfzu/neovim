@@ -42,6 +42,39 @@ local plugins = {
     "neovim/nvim-lspconfig",
     dependencies = { "williamboman/mason-lspconfig.nvim" },
   },
+  "glepnir/lspsaga.nvim",
+  -- completion
+  {
+    event = "VeryLazy",
+    'hrsh7th/nvim-cmp',
+    dependencies = {
+      'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-path',
+      'hrsh7th/cmp-cmdline',
+      'hrsh7th/cmp-vsnip',
+      'hrsh7th/vim-vsnip',
+      'rafamadriz/friendly-snippets',
+      'onsails/lspkind-nvim'
+    },
+  },
+  "github/copilot.vim",
+  -- indent-blankline
+  "lukas-reineke/indent-blankline.nvim",
+  -- rust and dap
+  'mfussenegger/nvim-dap',
+  'rcarriga/nvim-dap-ui',
+  'simrat39/rust-tools.nvim',
+  -- persistance
+  {
+    "folke/persistence.nvim",
+    event = "BufReadPre", -- this will only start session saving when an actual file was opened
+    opts = {
+      -- add any custom options here
+    }
+  },
+  -- git
+  'lewis6991/gitsigns.nvim',
 }
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
