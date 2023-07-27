@@ -31,6 +31,17 @@ local plugins = {
       'moll/vim-bbye',
     },
   },
+  -- mason -- lsp
+  {
+    event = "VeryLazy",
+    "williamboman/mason.nvim",
+    build = ":MasonUpdate", -- :MasonUpdate updates registry contents
+  },
+  {
+    event = "VeryLazy",
+    "neovim/nvim-lspconfig",
+    dependencies = { "williamboman/mason-lspconfig.nvim" },
+  },
 }
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
