@@ -1,3 +1,5 @@
 require("plugins/config/colorscheme")
 require("plugins/config/telescope")
 require("plugins/config/nvim-tree")
+require("plugins/config/buffer-line")
+require("plugins/config/lualine")
