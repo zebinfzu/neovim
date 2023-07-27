@@ -4,6 +4,10 @@ local plugins = {
     "RRethy/nvim-base16",
     lazy = true,
   },
+  {
+    event = "VeryLazy",
+    'navarasu/onedark.nvim'
+  },
 }
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
