@@ -1,5 +1,9 @@
 local plugins = {
-
+  -- color
+  {
+    "RRethy/nvim-base16",
+    lazy = true,
+  },
 }
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
