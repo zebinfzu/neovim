@@ -8,6 +8,13 @@ local plugins = {
     event = "VeryLazy",
     'navarasu/onedark.nvim'
   },
+  -- serchfile
+  {
+    event = "VeryLazy",
+    "nvim-telescope/telescope.nvim",
+    tag = "0.1.1",
+    dependencies = { "nvim-lua/plenary.nvim" },
+  },
 }
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
